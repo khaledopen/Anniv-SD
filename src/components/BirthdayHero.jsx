@@ -66,7 +66,9 @@ export default function BirthdayHero({ data, onDiscover }) {
                         delay: reducedMotion ? 0 : 0.03 * globalIdx,
                         ease: 'easeOut',
                       }}
-                      className="inline-block text-gradient-magic"
+                      className={`inline-block ${
+                        char === '🎂' ? '' : 'text-gradient-magic'
+                      }`}
                     >
                       {char}
                     </motion.span>

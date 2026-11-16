@@ -104,8 +104,11 @@ export default function IntroScreen({ onOpen }) {
             Birthday Magic
           </p>
 
-          <h1 className="font-display text-3xl sm:text-4xl font-semibold leading-tight text-gradient-magic mb-8">
-            Une surprise spéciale t&apos;attend... 🎁
+          <h1 className="font-display text-3xl sm:text-4xl font-semibold leading-tight mb-8">
+            <span className="text-gradient-magic">
+              Une surprise spéciale t&apos;attend...
+            </span>{' '}
+            <span aria-hidden="true" className="inline-block align-middle">🎁</span>
           </h1>
 
           <motion.button
