@@ -10,7 +10,7 @@ export default function BirthdayHero({ data, onDiscover }) {
   const [imgError, setImgError] = useState(false);
 
   const headline = `Happy Birthday, ${data.birthdayName} ! 🎂`;
-  const letters = Array.from(headline);
+  const words = headline.split(' ');
 
   return (
     <section
@@ -49,20 +49,30 @@ export default function BirthdayHero({ data, onDiscover }) {
             aria-label={headline}
             className="font-display text-4xl font-semibold leading-[1.12] sm:text-6xl lg:text-7xl"
           >
-            {letters.map((char, index) => (
-              <motion.span
-                key={`${char}-${index}`}
-                initial={reducedMotion ? false : { opacity: 0, y: 18 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.38,
-                  delay: reducedMotion ? 0 : 0.03 * index,
-                  ease: 'easeOut',
-                }}
-                className="inline-block text-gradient-magic"
+            {words.map((word, wordIndex) => (
+              <span
+                key={`${word}-${wordIndex}`}
+                className="inline-block whitespace-nowrap mr-[0.28em]"
               >
-                {char === ' ' ? '\u00A0' : char}
-              </motion.span>
+                {Array.from(word).map((char, charIndex) => {
+                  const globalIdx = wordIndex * 6 + charIndex;
+                  return (
+                    <motion.span
+                      key={`${char}-${charIndex}`}
+                      initial={reducedMotion ? false : { opacity: 0, y: 18 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{
+                        duration: 0.38,
+                        delay: reducedMotion ? 0 : 0.03 * globalIdx,
+                        ease: 'easeOut',
+                      }}
+                      className="inline-block text-gradient-magic"
+                    >
+                      {char}
+                    </motion.span>
+                  );
+                })}
+              </span>
             ))}
           </h1>
 

@@ -88,13 +88,16 @@ export default function IntroScreen({ onOpen }) {
             type="button"
             onClick={handleOpen}
             aria-label="Ouvrir la boîte surprise"
-            whileHover={reducedMotion ? undefined : { scale: 1.06, rotate: [-1, 1, 0] }}
+            whileHover={reducedMotion ? undefined : { scale: 1.05 }}
             whileTap={reducedMotion ? undefined : { scale: 0.96 }}
-            className="group relative mb-6 sm:mb-8 flex h-24 w-24 sm:h-32 sm:w-32 items-center justify-center rounded-3xl glass-card shadow-glow transition-shadow duration-500 hover:shadow-[0_0_60px_-8px_rgba(244,114,182,0.75)] focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
+            className="group relative mb-6 sm:mb-8 flex h-44 w-44 sm:h-56 sm:w-56 items-center justify-center overflow-hidden rounded-3xl glass-card p-1.5 shadow-glow transition-shadow duration-500 hover:shadow-[0_0_65px_-8px_rgba(244,114,182,0.85)] focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
           >
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-pink-500/25 via-transparent to-amber-300/25 opacity-80 group-hover:opacity-100 transition-opacity" />
-            <RealisticGiftIcon className="h-14 w-14 sm:h-20 sm:w-20 drop-shadow-[0_10px_22px_rgba(244,114,182,0.55)] transition-transform duration-500 group-hover:scale-110" />
-            <Sparkles className="absolute -top-2 -right-2 h-6 w-6 text-amber-300 animate-pulse" />
+            <img
+              src="/photos/intro-gift.jpg"
+              alt="Boîte cadeau magique"
+              className="h-full w-full rounded-[1.25rem] object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <Sparkles className="absolute top-3 right-3 h-6 w-6 text-amber-200 drop-shadow-[0_0_8px_rgba(253,224,71,0.9)] animate-pulse" />
           </motion.button>
 
           <p className="mb-3 text-xs uppercase tracking-[0.35em] text-pink-200/80">
