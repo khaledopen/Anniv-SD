@@ -99,7 +99,7 @@ export default function BirthdayHero({ data, onDiscover }) {
               className="group inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-pink-500 via-fuchsia-500 to-amber-400 px-7 py-3.5 text-sm sm:text-base font-semibold text-white shadow-glow transition-all hover:scale-[1.03] hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-200"
             >
               <Sparkles className="h-4 w-4" />
-              Découvrir la surprise
+              Explorer la surprise
               <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
             </button>
           </motion.div>

@@ -27,24 +27,39 @@ export default function SpecialMessage({ message }) {
               key="closed-envelope"
               initial={reducedMotion ? false : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={reducedMotion ? undefined : { opacity: 0, scale: 0.94 }}
+              exit={reducedMotion ? undefined : { opacity: 0, scale: 0.94, y: -12 }}
               transition={{ duration: 0.45 }}
-              className="w-full max-w-md rounded-3xl glass-card p-8 sm:p-10 text-center shadow-glow"
+              className="w-full max-w-lg flex flex-col items-center text-center"
             >
-              <div className="mx-auto mb-5 sm:mb-6 flex h-20 w-20 sm:h-24 sm:w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-400/25 to-amber-300/20 border border-white/20 shadow-glow">
-                <RealisticEnvelopeIcon className="h-12 w-12 sm:h-16 sm:w-16 drop-shadow-[0_8px_18px_rgba(244,114,182,0.45)]" />
-              </div>
-              <p className="font-display text-2xl italic text-pink-50 mb-6">
-                Une enveloppe t&apos;est destinée...
-              </p>
-              <button
+              <motion.div
+                onClick={() => setIsOpen(true)}
+                animate={
+                  reducedMotion
+                    ? undefined
+                    : { y: [0, -8, 0], rotate: [0, 0.8, -0.8, 0] }
+                }
+                transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
+                whileHover={reducedMotion ? undefined : { scale: 1.03 }}
+                whileTap={reducedMotion ? undefined : { scale: 0.98 }}
+                className="group relative w-full cursor-pointer overflow-hidden rounded-3xl glass-card p-2 shadow-glow transition-shadow duration-500 hover:shadow-[0_0_60px_-8px_rgba(244,114,182,0.7)]"
+              >
+                <img
+                  src="/photos/envelope-special.png"
+                  alt="Un message spécial pour toi"
+                  className="h-auto w-full rounded-2xl object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                />
+              </motion.div>
+
+              <motion.button
                 type="button"
                 onClick={() => setIsOpen(true)}
-                className="inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-pink-500 via-fuchsia-500 to-amber-400 px-7 py-3.5 text-sm sm:text-base font-semibold text-white shadow-glow transition hover:scale-[1.03] hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-200"
+                whileHover={reducedMotion ? undefined : { scale: 1.05 }}
+                whileTap={reducedMotion ? undefined : { scale: 0.96 }}
+                className="mt-6 inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-pink-200 via-pink-100 to-rose-200 px-8 py-3.5 text-sm sm:text-base font-semibold text-purple-950 shadow-glow transition hover:brightness-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
               >
                 <MailOpen className="h-4 w-4" />
-                Lire ton message
-              </button>
+                Lire mon message →
+              </motion.button>
             </motion.div>
           ) : (
             <motion.article
