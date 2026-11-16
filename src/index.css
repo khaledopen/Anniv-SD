@@ -109,6 +109,14 @@
   transform-origin: bottom center;
 }
 
+@media (max-width: 768px) {
+  .glass-card,
+  .glass-pill {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

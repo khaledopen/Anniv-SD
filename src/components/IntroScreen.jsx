@@ -20,9 +20,7 @@ export default function IntroScreen({ onOpen }) {
   const handleOpen = () => {
     if (opening) return;
     setOpening(true);
-    setTimeout(() => {
-      onOpen();
-    }, reducedMotion ? 100 : 320);
+    onOpen();
   };
 
   return (

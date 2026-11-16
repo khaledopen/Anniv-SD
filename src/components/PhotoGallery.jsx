@@ -55,7 +55,7 @@ function HangingPolaroid({ photo, index, onClick }) {
                   src={photo.src}
                   muted
                   playsInline
-                  preload="metadata"
+                  preload="none"
                   onError={() => setHasError(true)}
                   className="h-auto w-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
                 />
