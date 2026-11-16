@@ -1,13 +1,13 @@
 export const birthdayData = {
-  birthdayName: 'Camille',
+  birthdayName: 'Traoré Moussa Saïd',
   birthdayDate: '16 Novembre',
   heroMessage:
-    "Aujourd'hui, chaque étoile brille un peu plus fort pour célébrer la personne extraordinaire que tu es.",
+    "Aujourd'hui, chaque étoile brille un peu plus fort pour célébrer le grand frère extraordinaire que tu es.",
 
   mainPhoto: {
     src: '/photos/uploaded/WhatsApp Image 2026-11-16 at 09.06.45 (1).jpeg',
-    alt: "Portrait lumineux d'anniversaire",
-    caption: 'Un rayon de lumière dans nos vies ✨',
+    alt: 'Portrait lumineux de Traoré Moussa Saïd pour son anniversaire',
+    caption: 'Un exemple, un repère, un grand frère en or ✨',
   },
 
   // Photos et vidéos intégrées depuis votre archive
@@ -142,14 +142,18 @@ export const birthdayData = {
   ],
 
   specialMessage: {
-    title: 'Pour toi, en ce jour unique',
-    greeting: 'Chère Camille,',
+    title: '🎉🎂 Joyeux anniversaire, mon grand frère ! ❤️',
+    greeting: 'Grand frère Traoré Moussa Saïd,',
     paragraphs: [
-      "En cette journée si spéciale, je voulais prendre un instant pour te dire à quel point ta présence illumine la vie de ceux qui t'entourent.",
-      'Merci pour ta douceur, ton humour, ta force tranquille et cette façon unique que tu as de transformer chaque moment en un souvenir inoubliable.',
-      "Je te souhaite une année remplie de projets passionnants, de fous rires sincères, de sérénité et d'amour. Ne change rien, tu es merveilleuse.",
+      "Aujourd’hui est un jour spécial, parce que c’est celui où une personne très importante dans ma vie est née.",
+      'Grand frère, je ne te le dis peut-être pas assez souvent, mais tu comptes énormément pour moi. Tu es bien plus qu’un frère. Tu es un exemple, un repère et une personne que je respecte profondément.',
+      'Je suis reconnaissant de t’avoir dans ma vie. Ta présence, tes conseils et tout ce que tu représentes pour moi ont une valeur immense. Même si je ne trouve pas toujours les mots pour l’exprimer, sache que je suis fier de t’avoir comme grand frère.',
+      'En ce jour particulier, je prie Dieu de t’accorder une longue vie, une excellente santé, la paix du cœur, la réussite dans tous tes projets et surtout le bonheur que tu mérites.',
+      "Que cette nouvelle année de ta vie t'ouvre des portes encore plus grandes et t'apporte de belles bénédictions.",
+      'Merci d’être ce grand frère si important pour moi. Peu importe les années qui passent, tu occuperas toujours une place particulière dans mon cœur. ❤️',
+      '🎂 Happy Birthday, Big Brother! 🎉',
     ],
-    signature: 'Avec toute mon affection ✨',
+    signature: 'Avec beaucoup d’amour et de respect, ton petit frère. ❤️',
   },
 
   finalMessage:
