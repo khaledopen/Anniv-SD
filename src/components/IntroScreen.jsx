@@ -22,7 +22,7 @@ export default function IntroScreen({ onOpen }) {
     setOpening(true);
     setTimeout(() => {
       onOpen();
-    }, reducedMotion ? 150 : 850);
+    }, reducedMotion ? 100 : 320);
   };
 
   return (
@@ -32,10 +32,10 @@ export default function IntroScreen({ onOpen }) {
         initial={{ opacity: 1 }}
         animate={
           opening && !reducedMotion
-            ? { opacity: 0, scale: 1.12, filter: 'blur(8px)' }
+            ? { opacity: 0, scale: 1.06 }
             : { opacity: 1, scale: 1 }
         }
-        transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
         className="fixed inset-0 z-50 flex flex-col items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_50%_35%,#4c1d95_0%,#1e0b36_50%,#090412_100%)] px-6 text-center"
       >
         {/* Ambient bokeh halos */}
