@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Share2, RotateCcw, Check } from 'lucide-react';
+import { Share2, RotateCcw, Check } from 'lucide-react';
+import { RealisticSparkleHeartIcon } from './MagicIcons';
 import { fireFireworksBurst } from './ConfettiEffect';
 import { useReducedMotion } from '../hooks/useReducedMotion';
 
@@ -66,8 +67,8 @@ export default function FinalSurprise({ message, name, onReplayMemories }) {
         transition={{ duration: 0.8 }}
         className="relative z-10 mx-auto max-w-3xl rounded-3xl glass-card p-8 sm:p-14 shadow-glow"
       >
-        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-pink-400/30 to-amber-300/30 border border-white/25">
-          <Sparkles className="h-8 w-8 text-amber-200" />
+        <div className="mx-auto mb-5 sm:mb-6 flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-full bg-gradient-to-br from-pink-400/25 to-amber-300/25 border border-white/25 shadow-glow">
+          <RealisticSparkleHeartIcon className="h-10 w-10 sm:h-14 sm:w-14 drop-shadow-[0_8px_18px_rgba(244,114,182,0.5)]" />
         </div>
 
         <h2 className="font-display text-3xl font-semibold leading-snug sm:text-5xl text-gradient-magic">

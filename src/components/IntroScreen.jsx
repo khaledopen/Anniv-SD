@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Gift, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { RealisticGiftIcon } from './MagicIcons';
 import { useReducedMotion } from '../hooks/useReducedMotion';
 
 const STARS = Array.from({ length: 28 }, (_, i) => ({
@@ -89,10 +90,10 @@ export default function IntroScreen({ onOpen }) {
             aria-label="Ouvrir la boîte surprise"
             whileHover={reducedMotion ? undefined : { scale: 1.06, rotate: [-1, 1, 0] }}
             whileTap={reducedMotion ? undefined : { scale: 0.96 }}
-            className="group relative mb-8 flex h-32 w-32 items-center justify-center rounded-3xl glass-card shadow-glow transition-shadow duration-500 hover:shadow-[0_0_60px_-8px_rgba(244,114,182,0.75)] focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
+            className="group relative mb-6 sm:mb-8 flex h-24 w-24 sm:h-32 sm:w-32 items-center justify-center rounded-3xl glass-card shadow-glow transition-shadow duration-500 hover:shadow-[0_0_60px_-8px_rgba(244,114,182,0.75)] focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
           >
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-pink-500/25 via-transparent to-amber-300/25 opacity-80 group-hover:opacity-100 transition-opacity" />
-            <Gift className="h-14 w-14 text-pink-200 drop-shadow-[0_0_15px_rgba(244,114,182,0.8)] transition-transform duration-500 group-hover:scale-110" />
+            <RealisticGiftIcon className="h-14 w-14 sm:h-20 sm:w-20 drop-shadow-[0_10px_22px_rgba(244,114,182,0.55)] transition-transform duration-500 group-hover:scale-110" />
             <Sparkles className="absolute -top-2 -right-2 h-6 w-6 text-amber-300 animate-pulse" />
           </motion.button>
 

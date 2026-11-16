@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, MailOpen, Sparkles } from 'lucide-react';
+import { RealisticEnvelopeIcon } from './MagicIcons';
 import { useReducedMotion } from '../hooks/useReducedMotion';
 
 export default function SpecialMessage({ message }) {
@@ -30,8 +31,8 @@ export default function SpecialMessage({ message }) {
               transition={{ duration: 0.45 }}
               className="w-full max-w-md rounded-3xl glass-card p-8 sm:p-10 text-center shadow-glow"
             >
-              <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-400/30 to-amber-300/20 border border-white/20">
-                <Mail className="h-10 w-10 text-pink-200" />
+              <div className="mx-auto mb-5 sm:mb-6 flex h-20 w-20 sm:h-24 sm:w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-400/25 to-amber-300/20 border border-white/20 shadow-glow">
+                <RealisticEnvelopeIcon className="h-12 w-12 sm:h-16 sm:w-16 drop-shadow-[0_8px_18px_rgba(244,114,182,0.45)]" />
               </div>
               <p className="font-display text-2xl italic text-pink-50 mb-6">
                 Une enveloppe t&apos;est destinée...

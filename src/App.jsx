@@ -32,12 +32,12 @@ export default function App() {
           <PhotoGallery photos={birthdayData.galleryPhotos} />
           <MemoriesTimeline memories={birthdayData.memories} />
           <SpecialMessage message={birthdayData.specialMessage} />
-          <BirthdayCake name={birthdayData.birthdayName} />
           <FinalSurprise
             message={birthdayData.finalMessage}
             name={birthdayData.birthdayName}
             onReplayMemories={() => scrollToSection('galerie')}
           />
+          <BirthdayCake />
           <MusicControl music={birthdayData.backgroundMusic} />
         </main>
       )}
