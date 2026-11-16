@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+    background: radial-gradient(circle at 20% 20%, #2a1044 0%, #140824 45%, #090412 100%);
+    color: #fdf8ff;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.04));
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 20px 50px rgba(10, 4, 24, 0.45);
+  }
+
+  .glass-pill {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .text-gradient-magic {
+    background: linear-gradient(135deg, #fff5f9 0%, #f9a8d4 45%, #fde68a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #fef3c7 0%, #fbbf24 55%, #f472b6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Twinkling stars & bokeh */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-16px) translateX(6px);
+  }
+}
+
+@keyframes flicker {
+  0%, 100% {
+    transform: scale(1) rotate(-2deg);
+    opacity: 0.95;
+  }
+  25% {
+    transform: scale(1.06, 0.96) rotate(2deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.96, 1.08) rotate(-1deg);
+    opacity: 0.9;
+  }
+  75% {
+    transform: scale(1.04, 0.98) rotate(3deg);
+    opacity: 1;
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle var(--twinkle-duration, 3.6s) ease-in-out infinite;
+  animation-delay: var(--twinkle-delay, 0s);
+}
+
+.animate-float-slow {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+.animate-flicker {
+  animation: flicker 1.1s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-twinkle,
+  .animate-float-slow,
+  .animate-flicker {
+    animation: none !important;
+  }
+}

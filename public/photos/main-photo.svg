@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <linearGradient id="g0" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6"/>
+      <stop offset="55%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <radialGradient id="b0" cx="70%" cy="25%" r="50%">
+      <stop offset="0%" stop-color="#fde68a" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#fde68a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#g0)"/>
+  <rect width="800" height="1000" fill="url(#b0)"/>
+  <circle cx="200" cy="300" r="144" fill="#fde68a" fill-opacity="0.14"/>
+  <circle cx="624" cy="720" r="192" fill="#ffffff" fill-opacity="0.09"/>
+  <circle cx="400" cy="480" r="72" fill="#fde68a" fill-opacity="0.22"/>
+  <text x="50%" y="860" text-anchor="middle" fill="#ffffff" fill-opacity="0.88" font-family="Georgia, serif" font-size="34" font-style="italic">Sous les étoiles</text>
+</svg>
